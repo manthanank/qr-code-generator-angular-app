@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "qr-code-generator-angular": {
+    "qr-code-generator-angular-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/qr-code-generator-angular",
+            "outputPath": "dist/qr-code-generator-angular-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "qr-code-generator-angular:build:production"
+              "browserTarget": "qr-code-generator-angular-app:build:production"
             },
             "development": {
-              "browserTarget": "qr-code-generator-angular:build:development"
+              "browserTarget": "qr-code-generator-angular-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "qr-code-generator-angular:build"
+            "browserTarget": "qr-code-generator-angular-app:build"
           }
         },
         "test": {
@@ -100,5 +100,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "5b2ef210-5655-41e7-aceb-e87bddb8252a"
   }
 }
