@@ -14,12 +14,12 @@
     <label>
         Authentication Type:
         <select [(ngModel)]="auth" name="auth">
-            <option value="nopass">No Password</option>
+            <option value="WPA" selected>WPA/WPA2</option>
             <option value="WEP">WEP</option>
-            <option value="WPA">WPA/WPA2</option>
+            <option value="nopass">No Password</option>
         </select>
     </label>
     <br>
-    <button type="submit">Generate QR Code</button>
+    <button type="submit" [disabled]="isButtonDisabled()">Generate QR Code</button>
 </form>
 <ngx-qrcode [value]="wifiString" class="bshadow"></ngx-qrcode>

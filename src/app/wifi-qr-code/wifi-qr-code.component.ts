@@ -21,4 +21,8 @@ export class WifiQrCodeComponent {
   makeCode() {
     this.wifiString = "WIFI:S:" + this.ssid + ";T:" + this.auth + ";P:" + this.password + ";;";
   }
+
+  isButtonDisabled() {
+    return !this.ssid || !this.password || !this.auth;
+  }
 }
