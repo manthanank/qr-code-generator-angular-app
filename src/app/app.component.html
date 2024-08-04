@@ -1,3 +1,10 @@
-<app-navbar></app-navbar>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<div class="container">
+  <h2>QR Code Generator</h2>
+  @if (!qrValue){
+  <p>Enter the text to generate QR code</p>
+  }
+  @else{
+  <qr-code [value]="qrValue" size="300" errorCorrectionLevel="M" class="qr-code"></qr-code>
+  }
+  <textarea [(ngModel)]="qrValue" (change)="onChangeValue($event)" class="qr-textarea"></textarea>
+</div>
